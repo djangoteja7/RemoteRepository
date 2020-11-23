@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% include 'cdnlines.html' %}
+</head>
+<style>
+    .container{margin-top:200px;}
+    .col1{padding:10px;}
+</style>
+<body>
+<div class="jumbotron">
+<div class="container">
+    <div class="row">
+        <div class="offset-md-4 col-md-4 text-center col1">
+            <form method="POST">{% csrf_token %}
+                <h3>Do you want to delete?</h3>
+                <input type="submit" value=" YES " class="btn btn-success btn-lg">
+                <a href="/" class="btn btn-danger btn-lg">CLOSE</a>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
